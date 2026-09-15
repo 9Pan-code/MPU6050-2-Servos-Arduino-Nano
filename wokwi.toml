@@ -1,4 +1,4 @@
 [wokwi]
 version = 1
-firmware = "mpu6050/build/mpu6050.ino.hex"
-elf = "mpu6050/build/mpu6050.ino.elf"
+firmware = "mpu6050/compiled/mpu6050.ino.hex"
+elf = "mpu6050/compiled/mpu6050.ino.elf"
