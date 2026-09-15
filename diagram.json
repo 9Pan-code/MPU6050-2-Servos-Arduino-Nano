@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-nano", "id": "nano", "top": -4.8, "left": -0.5, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": 46, "left": 182.4, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo2", "top": 142, "left": 182.4, "attrs": {} },
+    { "type": "wokwi-mpu6050", "id": "imu1", "top": 90.22, "left": 31.12, "attrs": {} }
+  ],
+  "connections": [
+    [ "nano:VIN", "servo1:V+", "red", [ "v0" ] ],
+    [ "servo1:GND", "nano:GND.1", "black", [ "h0" ] ],
+    [ "nano:GND.1", "servo2:GND", "black", [ "v0" ] ],
+    [ "nano:VIN", "servo2:V+", "red", [ "v0" ] ],
+    [ "nano:GND.2", "imu1:GND", "black", [ "v67.2", "h-28.88" ] ],
+    [ "imu1:VCC", "nano:VIN", "red", [ "v0" ] ],
+    [ "nano:A4", "imu1:SDA", "green", [ "v19.2", "h-9.68" ] ],
+    [ "nano:A5", "imu1:SCL", "green", [ "v19.2", "h-9.68" ] ],
+    [ "servo2:PWM", "nano:10", "green", [ "h0" ] ],
+    [ "servo1:PWM", "nano:9", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
